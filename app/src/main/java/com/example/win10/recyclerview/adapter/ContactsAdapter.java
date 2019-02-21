@@ -37,6 +37,7 @@ public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.ViewHo
     public void onBindViewHolder(@NonNull ContactsAdapter.ViewHolder viewHolder, int i) {
     //menguhubungkan / mensetting nilai masing" item
 
+
     }
 
     @Override
@@ -45,10 +46,12 @@ public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.ViewHo
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-
+        private TextView nameTextView;
+        private Button messageButton;
         public ViewHolder(@NonNull View itemView){
             super(itemView);
-
+            nameTextView = itemView.findViewById(R.id.contact_name);
+            messageButton = itemView.findViewById(R.id.message_button);
 
 
         }
