@@ -36,7 +36,13 @@ public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.ViewHo
     @Override
     public void onBindViewHolder(@NonNull ContactsAdapter.ViewHolder viewHolder, int i) {
     //menguhubungkan / mensetting nilai masing" item
+        Contact itemContact = mContact.get(i);
+        TextView textView = viewHolder.nameTextView;
+        textView.setText(itemContact.getmNama());
 
+        Button buttonContact = viewHolder.messageButton;
+        buttonContact.setText(itemContact.isOnline()? "Message" : "Offline");
+        buttonContact.setEnabled(itemContact.isOnline());
 
     }
 
